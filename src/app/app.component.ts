@@ -7,13 +7,15 @@ import {ColorfulDirective} from './colorful.directive'
 })
 export class AppComponent  {
   name = 'Angular';
+  
   @ViewChild('color',{static: false}) color;
-  @ViewChild('color2',{static: false}) color2:ColorfulDirective;
 
   public change():void{
     console.log(this.color,'changeColor')
     this.color.nativeElement.style.color='blue';
   }
+
+  @ViewChild('color2',{static: false}) color2:ColorfulDirective;
 
   public changeColor():void{
     console.log(this.color2,'changeColor');
